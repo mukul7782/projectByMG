@@ -1,0 +1,443 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.body{
+    height:100vh;
+    background: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    text-align: center;
+    padding:0.3rem;
+}
+.headercontent{
+    display: flex;
+    justify-content: space-between;
+    max-width:880px;
+    margin: 0 auto;
+    padding:1rem;
+}
+.A1{
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.logo{
+    gap:0.625rem;
+    font-size: 1.5rem;
+    display: flex;
+    font-weight: bold;
+    color: rgb(35, 31, 31);
+}
+.nav{
+    display: flex;
+    gap:1rem;
+    align-items: center;
+  
+}
+.navlink{
+    color: rgb(150, 146, 146);
+    transition: all;
+    transition: 0.1s;
+    display:none;
+}
+@media screen and (min-width:588px){
+    .navlink{
+        display: flex;
+    }
+}
+.navlink:hover{
+    color: blue;
+}
+.contactbutton{
+    background:rgb(64, 64, 247);
+    color: aliceblue;
+    align-items: center;
+    padding:0.3rem;
+    border-radius: 5px;
+    display: none;
+}
+@media screen and (min-width:588px){
+        .contactbutton{
+            display: block;
+        }
+}
+.button{
+    height: 30px;
+    width:30px;
+    display:none;
+ }
+@media  screen and (max-width:588px){
+    .button{
+        display: flex;
+    }
+    
+}
+.section{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+    align-items:center;
+    justify-content: center;
+} 
+.contentL{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+@media screen and (min-width:730px) {
+    .contentL{
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        padding-left: 1px;
+        font-size: large;
+        justify-content: left;
+        height: 260px;
+        margin-top:70px ;
+        margin-bottom:70px ;
+        width: 300px;
+       animation: slidefromleft 1s ease  forwards;
+    
+    }
+    .section{
+        display:flex;
+        flex-direction: row;
+        max-width: 880px;
+        margin: 0 auto;
+        margin-top: 2rem;
+        gap:8rem;
+    }
+    .buttongroup{
+        display: flex;
+        flex-direction: row;
+        gap:1rem;
+        justify-content:start;
+    }
+}
+
+.buttongroup{
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    justify-content: center;
+}
+#B1{
+    color: azure;
+    background: blue;
+    border-radius: 5px;
+    padding: 6px;
+}
+#B2{
+    color: azure;
+    background:black;
+    border-radius: 5px;
+    padding: 6px;
+}
+.contentR{
+    display: flex;
+    align-items: center;
+}
+.I1{
+    height:450px;
+    width:400px;
+    border: 3px solid black;
+    border-radius: 10px;
+    
+}
+.P1{
+    text-align: left;
+    color: rgb(120, 120, 240);
+    font-size: small;
+}
+.P2{
+    text-align: left;
+    color: rgb(161, 159, 159);
+    
+}
+.H1{
+    text-align: left;
+    font-weight: bolder;
+    font-size:xx-large;
+}
+
+
+.companycontainer{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    animation: slidefromleft  1s ease forwards;
+
+}
+@keyframes slidefromleft {
+    from{
+        left:1px;
+        
+    }
+    to{
+        left:400px;
+    }
+    
+}
+
+
+
+.logotext{
+    font-weight: 600;
+    color: rgb(184, 179, 179);
+    font-size: larger;
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.companygrid{
+    display: flex;
+    background: rgb(237, 232, 232);
+    padding: 8px;
+    border-radius: 3px;
+    gap:1rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.comapanylogo{
+   font-weight: 600;
+ 
+ 
+   }
+#CI1{
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+}
+.container2{
+    background-color: rgb(221, 217, 217);
+    display: flex;
+    margin-top: 2rem;
+    align-items: start;
+    justify-content: center;
+    background: rgb(223, 222, 222);
+    height:620px;
+
+  }
+  .box2{
+   gap:1rem;
+   margin-top: 2rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   max-width: 681px;
+   background:rgb(222,222,222);
+  }
+  .grid{
+    
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,1fr);
+}
+@media screen  and (min-width:550px){
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+}
+  
+  #C{
+    border-radius: 5px;
+     padding:5px;
+    margin: 1rem;
+     display:flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     background: pink;
+     color:aliceblue;
+  }
+
+#A11{
+    border-radius: 50%;
+    height:40px;
+    width:40px;
+}
+.container3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box3{
+    gap: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+}
+.gridbox3{
+    gap:20px;
+    display: flex;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,1fr);
+}
+#IMG2{
+  
+  height:40px;
+  width:40px;
+  border-radius: 50%;
+}
+#L1{
+   padding:0.6rem;
+   border: 2px solid rgb(176, 173, 173);
+   transition: all;
+   transition-duration:0.6s;
+}
+
+#L1:hover{
+    transform: scale(1.05);
+    border-color: rgb(90, 163, 247);
+}
+
+.NAME{
+
+    font-weight: 600;
+    color: blue;
+}
+#gb3Ip{
+    font-size: smaller;
+}
+.container4{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.box4{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    height:250px;
+}
+.box4R{
+  
+  padding:5px;  
+  background: rgb(221, 219, 219);
+  display: flex;
+  flex-direction:column;
+  align-items:start;
+  justify-content:center;
+  padding-left: 20px;
+  gap:0.4rem;
+}
+.boxRH{
+    height:30px;
+    font-weight: 900;
+    color: rgb(86, 86, 239);
+}
+.boxRform{
+    gap:1.5rem;
+    display: flex;
+     flex-direction: row;
+}
+#signup{
+    font-weight: 600;
+    padding:3px;
+    border-radius: 5px;
+    background: blue;
+    color: aliceblue;
+}
+#box4img{
+    width:450px;
+    height:250px;
+}
+.boxRf{
+    display: flex;
+    align-items: start;
+}
+#Ax{
+    height: 30px;
+    width:40px;
+}
+.footercontainer{
+    background: greenyellow;
+    display: flex;
+    flex-direction: column;
+    background: rgb(235, 230, 230);
+    width:1280px;
+    justify-items: center;
+    margin-top: 1.5rem;
+    align-items: center;
+    height:350px;
+}
+.footertop{
+      width:940px;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      padding:1rem;
+      height:400px;
+      
+}
+.footerL{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    gap:2rem;
+
+}
+#comapnylogo{
+    height:30px;
+    width:30px;
+    
+}
+.hero{
+    gap:1rem;
+}
+.socialcomapnylogo{
+    gap:1rem ;
+}
+.text{
+    color: rgb(138, 139, 139) ;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+  
+    align-items: center;
+}
+.footergrid{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows: repeat(1,1fr);
+}
+.footergridheading{
+    font-size: large;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.footergrid
+{
+    gap:3rem;
+}
+.productlinks{
+    color: rgb(138, 139, 139);
+}
+.footerbottom{
+    margin-bottom: 30px;
+}
+.productlinks:hover{
+    color: rgb(119, 119, 228);
+}
