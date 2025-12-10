@@ -1,0 +1,136 @@
+:root{
+    --face-size: 320px;
+    --skin: #f7cd50;
+    --stroke: #2b2b2b;
+    --accent: #333;
+    --transition: 1820ms cubic-bezier(.2,.9,.2,1);
+  }
+   input {
+    margin-top: 20px;
+    padding: 10px 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #444;
+    width: 220px;
+    text-align: center;
+    outline: none;
+  }
+  body{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    display:flex;
+    gap:32px;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    margin:  0;
+    background:black;
+    color:#222;
+    flex-direction:column;
+  }
+
+  .panel{
+    display:flex;
+    gap:18px;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  .face-wrap{
+    width:var(--face-size);
+    height:var(--face-size);
+    display:grid;
+    place-items:center;
+    background:transparent;
+  }
+  .face-wrap {
+  display: inline-block;
+  animation: jump 2s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+/* Jump motion */
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); /* height of jump */
+  }
+}
+
+  svg { width:100%; height:100%; overflow:hidden; }
+
+  /* Common face element transitions */
+  .head, .eye, .pupil, .mouth, .brow {
+    transition: transform var(--transition), opacity var(--transition), r var(--transition), d var(--transition);
+    transform-origin: center;
+  }
+
+  /* Head outline */
+  .head { fill:var(--skin); stroke:var(--stroke); stroke-width:3; }
+
+  /* Eyes are circles; we toggle 'eye-open' class to close */
+  .eye { fill:white; stroke:var(--accent); stroke-width:2; }
+  .pupil { fill:var(--accent); transition: transform var(--transition); }
+
+  /* Mouth is an ellipse; we scale/translate it to smile/frown */
+  .mouth { fill:none; stroke:var(--accent); stroke-width:4; stroke-linecap:round; }
+
+  /* Brows */
+  .brow { stroke:var(--accent); stroke-width:5; stroke-linecap:round; fill:none; }
+
+ 
+  /* Controls */
+  .controls { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
+  button{
+    padding:8px 12px; border-radius:8px; border:1px solid rgba(0,0,0,0.06);
+    background:white; cursor:pointer; box-shadow: 0 4px 10px rgba(16,24,40,0.05);
+  }
+  button:active{ transform:translateY(1px); }
+  .label { font-size:14px; text-align:center; margin-bottom:8px; color: aliceblue; 
+}
+  @keyframes blink {
+  0%, 90%, 100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+#leftEyeG, #rightEyeG {
+  transform-origin: center;
+  transition:cubic-bezier(0.47, 0, 0.745, 0.715) 300ms;
+  animation: blink 3s infinite;
+}
+
+/* Base eyelash styling */
+#leftLashes, #rightLashes {
+    stroke:var(--accent);
+  stroke-width: 1.2;
+  fill: none;
+  stroke-linecap: round;
+  transform-origin: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Optional: subtle curve animation during blink */
+@keyframes lashBlink {
+  0%, 90%, 100% {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+  }
+  95% {
+    transform: translateY(4px) scaleY(0.5);
+    opacity: 0.6;
+  }
+}
+
+/* Make lashes blink in sync with eyes */
+#leftEyeG, #rightEyeG {
+  transform-origin: center;
+  animation: blink 4s infinite;
+}
+/* Eye blink (group scaling) */
+

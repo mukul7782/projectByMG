@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>SVG Emotion Faces — Live</title>
+<link rel="stylesheet" href="raghav.css" />
+<style>
+</style>
+</head>
+<body>
+
+<div class="panel">
+  <div class="face-wrap" aria-hidden="false">
+    <!-- The face: sizes use viewBox units so it stays crisp vector -->
+    <svg viewBox="0 0 200 200" id="face" role="img" aria-label="Animated emoji face">
+      <!-- head -->
+      <ellipse class="head" cx="100" cy="100" rx="78" ry="78"/>
+      <!-- left eye group -->
+      <g id="leftEyeG" transform="translate(-18,0)">
+        <circle class="eye" id="leftEye" cx="72" cy="88" r="12"/>
+        <circle class="pupil" id="leftPupil" cx="72" cy="88" r="5"/>
+          <path id="leftLashes" d="M62 74 q4 -6 8 0 q4 -6 8 0 q4 -6 8 0" 
+              stroke="black" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </g>
+
+      <!-- right eye group -->
+      <g id="rightEyeG" transform="translate(18,0)">
+        <circle class="eye" id="rightEye" cx="128" cy="88" r="12"/>
+        <circle class="pupil" id="rightPupil" cx="128" cy="88" r="5"/>
+          <path id="rightLashes" d="M118 74 q4 -6 8 0 q4 -6 8 0 q4 -6 8 0"
+              stroke="black" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </g>
+      <!-- brows -->
+      <path class="brow" id="leftBrow" d="M57 65 q18 -12 36 0" />
+      <path class="brow" id="rightBrow" d="M143 65 q-18 -12 -36 0" />
+
+      <!-- mouth: we draw a rounded stroke path and animate scale/rotation/translate -->
+      <g id="mouthG" transform="translate(0,20)">
+        <path class="mouth" id="mouth" d="M70 135 q30 30 60 0" />
+      </g>
+  </svg>
+  </div>
+
+  <div style="min-width:260px;">
+    
+  <div class="label">Hi,Enter the queries please!</div>
+
+    <input type="text" id="emotionInput" placeholder="Enter emotion here" />
+    
+
+    <div style="height:12px"></div>
+</div>
+</div>
+
+<script src="raghav.js"></script>
+</body>
+</html>
